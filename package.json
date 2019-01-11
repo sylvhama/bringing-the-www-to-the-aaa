@@ -1,0 +1,23 @@
+{
+  "name": "ubisoft-club-react-meetup",
+  "version": "1.0.0",
+  "description": "Pres for React Meetup about Ubisoft Club console app",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx -d dist --no-html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab-ncsa.ubisoft.org:sylvhama/console-lite-react-meetup.git"
+  },
+  "author": "Sylvain Hamann",
+  "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^3.0.1",
+    "mdx-deck": "^1.8.2",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^1.0.0"
+  }
+}
