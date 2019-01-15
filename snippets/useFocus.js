@@ -15,7 +15,6 @@ const refCallback = ({
   if (id in nodes) return;
   addNode({
     id,
-    ref,
     depth,
     rect: customRect || ref.getBoundingClientRect()
   });
@@ -36,25 +35,31 @@ export default ({
   const isFocused = id === focus.currentId;
   const isPreviousFocus = id === focus.previousId;
 
-  useEffect(() => isFocused && focus.nodes[id].ref.focus({ preventScroll }), [
-    isFocused
-  ]);
+  let focusRef;
+
+  useEffect(
+    () => (isFocused && focusRef ? focusRef.focus({ preventScroll }) : null),
+    [isFocused]
+  );
 
   useEffect(() => () => focus.removeNode(id), []);
 
   return {
-    refCallback: ref =>
-      ref &&
-      refCallback({
-        ref,
-        id,
-        depth,
-        toFocus,
-        customRect,
-        nodes: focus.nodes,
-        addNode: focus.addNode,
-        focusNode: focus.focusNode
-      }),
+    refCallback: ref => {
+      if (ref) {
+        focusRef = ref;
+        refCallback({
+          ref,
+          id,
+          depth,
+          toFocus,
+          customRect,
+          nodes: focus.nodes,
+          addNode: focus.addNode,
+          focusNode: focus.focusNode
+        });
+      }
+    },
     isFocused,
     isPreviousFocus,
     tabIndex: isFocused ? 0 : isPreviousFocus ? -1 : null

@@ -3,7 +3,6 @@
     loginButton: {
       id: 'loginButton',
       depth: 0,
-      ref: button.Button-sc...,
       rect: {
         bottom: 954.390625,
         height: 96,
@@ -18,7 +17,7 @@
     createAccountButton: {...}
   },
   currentId: 'loginButton',
-  currentDepth: 0,
   previousId: 'createAccountButton',
+  currentDepth: 0,
   depthsMainId: { 0: 'loginButton' }
 }

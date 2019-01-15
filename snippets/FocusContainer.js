@@ -1,15 +1,12 @@
-import { Component } from 'react';
-import { connect } from 'react-redux';
+import { Component } from "react";
+import { connect } from "react-redux";
 
-import { addNode, removeNode, focusNode } from '../actions/focus';
+import { addNode, removeNode, focusNode } from "../actions/focus";
 
 const mapStateToProps = (state, ownProps) => ({
   nodes: state.focus.nodes,
   isFocused: state.focus.currentId === ownProps.id,
-  isPreviousFocus: state.focus.previousId === ownProps.id,
-  currentRef: state.focus.currentId
-    ? state.focus.nodes[state.focus.currentId].ref
-    : null
+  isPreviousFocus: state.focus.previousId === ownProps.id
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -34,9 +31,9 @@ const FocusContainer = connect(
         customRect
       } = this.props;
       if (id in nodes) return;
+      this.ref = ref;
       addNode({
         id,
-        ref,
         depth,
         rect: customRect || ref.getBoundingClientRect()
       });
@@ -49,10 +46,9 @@ const FocusContainer = connect(
     }
 
     componentDidUpdate(prevProps) {
-      const { isFocused, currentRef, preventScroll } = this.props;
-      if (currentRef && isFocused && !prevProps.isFocused) {
-        currentRef.focus({ preventScroll });
-      }
+      const { isFocused, preventScroll } = this.props;
+      if (this.ref && isFocused && !prevProps.isFocused)
+        this.ref.focus({ preventScroll });
     }
 
     render() {

@@ -150,14 +150,15 @@ However the gamepad is firing keyboard events. 🤪
   showNumbers={false}
   theme={vsDark}
   steps={[
-    { range: [1, 25] },
-    { range: [2, 19], notes: "Object {id: nodeDetails}" },
+    { range: [1, 24] },
+    { range: [2, 18], notes: "Each node is represented as: {id: nodeDetails}" },
     {
-      range: [7, 16],
+      range: [6, 15],
       notes: "Element.getBoundingClientRect() or custom values"
     },
-    { range: [19, 22] },
-    { lines: [23], notes: "e.g. used by modals" }
+    { range: [19, 20], notes: "Used for isFocus and accessibility (tabIndex)" },
+    { lines: [21], notes: "Used by modals" },
+    { lines: [22], notes: "Used when leaving a modal" }
   ]}
 />
 
@@ -202,13 +203,13 @@ However the gamepad is firing keyboard events. 🤪
   showNumbers={false}
   theme={vsDark}
   steps={[
-    { range: [1, 73] },
-    { range: [6, 13] },
-    { range: [15, 19] },
-    { range: [26, 44], notes: "Register node" },
-    { range: [46, 49] },
-    { range: [51, 56] },
-    { range: [58, 66] }
+    { range: [1, 69] },
+    { range: [6, 10] },
+    { range: [12, 16] },
+    { range: [23, 41], notes: "Register node" },
+    { range: [43, 46] },
+    { range: [48, 53] },
+    { range: [54, 62] }
   ]}
 />
 
@@ -253,7 +254,11 @@ However the gamepad is firing keyboard events. 🤪
   lang="js"
   showNumbers={false}
   theme={vsDark}
-  steps={[{ range: [1, 63] }, { range: [39, 43] }, { range: [45, 62] }]}
+  steps={[
+    { range: [1, 68] },
+    { range: [39, 45], notes: "No more life cycle methods" },
+    { range: [48, 62], notes: "Almost the same" }
+  ]}
 />
 
 ---
