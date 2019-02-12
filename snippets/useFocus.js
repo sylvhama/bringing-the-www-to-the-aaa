@@ -38,7 +38,7 @@ export default ({
   let focusRef;
 
   useEffect(
-    () => (isFocused && focusRef ? focusRef.focus({ preventScroll }) : null),
+    () => (isFocused && focusRef ? focusRef.focus({ preventScroll }) : undefined),
     [isFocused]
   );
 
