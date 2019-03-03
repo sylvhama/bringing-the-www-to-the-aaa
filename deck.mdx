@@ -66,14 +66,11 @@ export default Split;
 <ul style={{ textAlign: "left" }}>
   <Appear>
     <li>User comes from the game</li>
+    <li>The game communicates via query parameters</li>
     <li>1920x1080 viewport</li>
-    <li>Two Web Browsers</li>
     <li>Adaptive Web Design</li>
-    <li>Pre-defined scrollable areas</li>
-    <li>Internationalization (20 languages)</li>
-    <li>Feature Switches</li>
-    <li>Performance (CDN, BFF, Code splitting...)</li>
-    <li>Visual / Behavior restrictions imposed by Sony or Microsoft</li>
+    <li>Two Web Browsers: Web Dialog and UWP app</li>
+    <li>Visual / Behavior guidelines imposed by Sony or Microsoft</li>
   </Appear>
 </ul>
 
@@ -87,11 +84,17 @@ Did you know? X and ◯ behaviors are reversed in Japan.
 
 ## Process
 
-1. Dev on Chrome (react / redux devtoools)
-2. Continuous Integration and Deployment via GitLab 🦊
-3. Test on a dev kit via a fake game
+<ol style={{ textAlign: "left" }}>
+  <Appear>
+    <li>Dev on Chrome (react / redux devtoools)
+    <li>Continuous Integration and Deployment via GitLab 🦊
+    <li>Test on a dev kit via a fake game
+  </Appear>
+</ol>
 
-But not everyone can have a dev kit 😟
+---
+
+But not everyone has a dev kit 😟
 
 ---
 
@@ -225,9 +228,7 @@ Focus Logic
 
 ---
 
-## HOOKS ⚓
-
-### Join the Battle!
+## Hooks Version ⚓
 
 ---
 
@@ -243,17 +244,6 @@ Focus Logic
     { range: [19, 24] },
     { range: [26, 38] }
   ]}
-/>
-
----
-
-<CodeSurfer
-  title="Custom hook: useFocusContext"
-  code={require("!raw-loader!./snippets/useFocusContext.js")}
-  lang="jsx"
-  showNumbers={false}
-  theme={vsDark}
-  notes={"Would replace the need of a Higher Order Component"}
 />
 
 ---
