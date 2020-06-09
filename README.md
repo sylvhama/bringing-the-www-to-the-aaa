@@ -1,5 +1,5 @@
 # [Bringing the WWW to the AAA](https://bringing-the-www-to-the-aaa.netlify.app/)
-Presentation about some of my work at Ubisoft Club for Montreal React meetup. 
+Presentation about some of my work at Ubisoft Club for Montreal React meetup. I also have shared more details in this [Twitter thread](https://twitter.com/sylvhama/status/1046820308647387141).
 
 ## Abstract
 
